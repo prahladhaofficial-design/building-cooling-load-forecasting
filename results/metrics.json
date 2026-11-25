@@ -1,0 +1,36 @@
+{
+  "n_buildings": 216,
+  "n_train_rows": 1823471,
+  "n_test_rows": 1862842,
+  "train_period": "2016 (first week used only for lag features)",
+  "test_period": "2017-01-01 to 2017-12-31",
+  "n_trees": 109,
+  "models": {
+    "Persistence (same hour yesterday)": {
+      "median_cv_rmse": 29.47,
+      "median_abs_nmbe": 0.08,
+      "median_peak_hour_mape": 9.86,
+      "pct_buildings_meeting_ashrae14": 51.4
+    },
+    "7-day same-hour average": {
+      "median_cv_rmse": 31.87,
+      "median_abs_nmbe": 0.27,
+      "median_peak_hour_mape": 13.03,
+      "pct_buildings_meeting_ashrae14": 46.3
+    },
+    "Ridge regression (same features)": {
+      "median_cv_rmse": 25.26,
+      "median_abs_nmbe": 4.15,
+      "median_peak_hour_mape": 11.36,
+      "pct_buildings_meeting_ashrae14": 63.0
+    },
+    "LightGBM (global model)": {
+      "median_cv_rmse": 21.55,
+      "median_abs_nmbe": 1.89,
+      "median_peak_hour_mape": 10.2,
+      "pct_buildings_meeting_ashrae14": 72.7
+    }
+  },
+  "lgbm_cv_rmse_reduction_vs_persistence_pct": 26.9,
+  "p10_p90_interval_coverage_pct": 78.0
+}

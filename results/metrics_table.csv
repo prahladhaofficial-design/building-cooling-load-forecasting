@@ -1,0 +1,5 @@
+,median_cv_rmse,median_abs_nmbe,median_peak_hour_mape,pct_buildings_meeting_ashrae14
+Persistence (same hour yesterday),29.47,0.08,9.86,51.4
+7-day same-hour average,31.87,0.27,13.03,46.3
+Ridge regression (same features),25.26,4.15,11.36,63.0
+LightGBM (global model),21.55,1.89,10.2,72.7
